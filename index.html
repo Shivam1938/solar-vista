@@ -5,15 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIPV Assessment</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         /* CSS Styles */
 
         body {
-            
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
@@ -21,7 +15,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
 
         .container {
@@ -41,6 +35,7 @@
         header h1 {
             margin: 0;
             color: #333;
+            font-size: 2em;
         }
 
         .inputs {
@@ -104,13 +99,69 @@
             font-weight: bold;
             color: #333;
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .inputs {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            button {
+                width: 100%;
+                padding: 12px;
+            }
+
+            .result p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                align-items: flex-start;
+            }
+
+            .container {
+                padding: 10px;
+                width: 100%;
+                box-shadow: none;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .input-group input {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+
+            #container {
+                height: 300px;
+            }
+
+            .result p {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>SOLARVISTA</h1>
-            <h4>BIPV assessment</h4>
+            <h1>BIPV Assessment</h1>
         </header>
         <main>
             <div class="inputs">
